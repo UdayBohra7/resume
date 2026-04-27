@@ -22,17 +22,25 @@
 \usepackage[unicode, draft=false]{hyperref}
 \usepackage{fontawesome5}
 
+\usepackage[T1]{fontenc}
+\usepackage{inter} % Modern, clean sans-serif font
+\renewcommand{\familydefault}{\sfdefault}
+
 % Layout settings
 \newcolumntype{C}{>{\centering\arraybackslash}X} 
 
-% CRITICAL: Explicitly defining the section style to ensure the line (titlerule) renders
-\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+% Color Definitions
+\definecolor{primaryColor}{RGB}{0, 79, 158} % Professional Deep Blue
+\definecolor{textColor}{RGB}{40, 40, 40}
+\definecolor{subtleGray}{RGB}{120, 120, 120}
 
-% Spacing between sections: {left}{before}{after}
-\titlespacing{\section}{0pt}{8pt}{4pt}
+% CRITICAL: Section style for modern look
+\titleformat{\section}{\large\bfseries\color{primaryColor}\scshape\raggedright}{}{0em}{}[\color{primaryColor}\titlerule]
 
-\definecolor{linkcolour}{rgb}{0,0.2,0.2}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+% Spacing between sections
+\titlespacing{\section}{0pt}{6pt}{3pt}
+
+\hypersetup{colorlinks,breaklinks,urlcolor=primaryColor,linkcolor=primaryColor}
 
 \begin{document}
 \pagestyle{empty} 
@@ -41,21 +49,28 @@
 %	TITLE / HEADER
 %----------------------------------------------------------------------------------------
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Uday Singh Bohra} \\[6pt]
-\textbf{Full Stack Developer} \\[4pt]
+\color{primaryColor}\Huge\textbf{UDAY SINGH BOHRA} \\[2pt]
+\large\textcolor{subtleGray}{Full Stack Developer $|$ MERN Stack Specialist} \\[4pt]
+\small
 \href{https://github.com/UdayBohra7}{\raisebox{-0.05\height}\faGithub\ GitHub} \ $|$ \  
 \href{https://www.linkedin.com/in/udaybohra7/}{\raisebox{-0.05\height}\faLinkedin\ LinkedIn} \ $|$ \  
 \href{mailto:bohrauday09@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ bohrauday09@gmail.com} \ $|$ \  
 \href{tel:+916397515520}{\raisebox{-0.05\height}\faMobile \ 6397515520} \\
-\small{Mohali, Punjab, India} \\
+\textcolor{subtleGray}{Mohali, Punjab, India} \\
 \end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SUMMARY
+%----------------------------------------------------------------------------------------
+\section{Professional Summary}
+Innovative \textbf{Full Stack Developer} with 2+ years of experience in the \textbf{MERN stack} and AI integration. Expert in architecting scalable web applications, secure payment systems, and AI-driven diagnostic tools that optimize operational efficiency.
 
 %----------------------------------------------------------------------------------------
 %	TECHNICAL SKILLS
 %----------------------------------------------------------------------------------------
 \section{Technical Skills}
 \begin{tabularx}{\linewidth}{@{}l >{\raggedright\arraybackslash}X@{}}
-\textbf{Frontend:} & JavaScript (ES6+), React.js, Next.js, TypeScript, Shopify-Remix, Tailwind CSS. \\
+\textbf{Frontend:} & JavaScript, React.js, Next.js, TypeScript, Shopify-Remix, Tailwind CSS. \\
 \textbf{Backend:} & Node.js, Express.js, MongoDB, Mongoose, RESTful APIs. \\
 \textbf{Payments:} & Stripe, PayPal, In-App Purchase (IAP) Backend APIs. \\
 \textbf{Tools/Cloud:} & AWS S3 Buckets, Firebase, Supabase, Zod, Joi, Swagger, JWT, PrintNode API. \\
@@ -71,7 +86,7 @@
 \textbf{MERN Stack Developer} & \hfill March 2025 -- April 2026 \\[1.2pt]
 \textbf{Esferasoft Pvt. Ltd., Mohali, Punjab} & \hfill \\
 \multicolumn{2}{@{}X@{}}{
-Orchestrated \textbf{secure payment infrastructures} for high-traffic applications, reducing transaction failure rates by 15\%. Architected \textbf{AI-driven workflows} using Auto Content and LLM APIs, streamlining 40\% of manual content generation. Implemented rigorous \textbf{schema validation} achieving 100\% data integrity and refined \textbf{cloud resource management}, resulting in a 30\% reduction in media upload latency across core endpoints.
+Architected \textbf{secure payment infrastructures} and \textbf{AI-driven workflows} using LLM APIs, streamlining 40\% of content generation. Optimized \textbf{cloud resource management} and schema validation, reducing media upload latency by 30\% while ensuring 100\% data integrity.
 }
 \end{tabularx}
 
@@ -81,7 +96,7 @@ Orchestrated \textbf{secure payment infrastructures} for high-traffic applicatio
 \textbf{MERN Stack Developer} & \hfill Feb 2024 -- Feb 2025 \\[1.2pt]
 \textbf{Beatum IT Solutions Pvt. Ltd., Mohali, Punjab} & \hfill \\
 \multicolumn{2}{@{}X@{}}{
-Engineered production-grade \textbf{subscription management systems} and digital asset APIs supporting 5,000+ active monthly users. Designed modular \textbf{reusable component libraries}, improving frontend development speed by 20\%. Enhanced \textbf{RESTful API architectures} on MongoDB, delivering a 25\% improvement in server-side response times for e-commerce platforms.
+Engineered \textbf{subscription systems} and digital asset APIs for 5,000+ monthly users. Designed modular \textbf{component libraries} improving dev speed by 20\%, and enhanced \textbf{RESTful API architectures} to boost server-side response times by 25\%.
 }
 \end{tabularx}
 
@@ -91,11 +106,11 @@ Engineered production-grade \textbf{subscription management systems} and digital
 \section{Projects}
 
 \textbf{Marissa Meals (Full Stack MERN)} \\
-Production-ready health app featuring \textbf{encrypted checkout systems}, AI media processing, and secure \textbf{JWT authentication}. Successfully handled algorithmic nutritional tracking for 200+ unique food items using multimodal AI models.
+Full-stack health app featuring \textbf{affiliate products} and AI media processing. Leveraged multimodal AI for tracking 200+ food items with secure \textbf{JWT authentication}.
 
 \vspace{1pt}
 \textbf{Vellay AI (AI Skin \& Hair Analysis)} \\
-Architected an AI-driven wellness platform for \textbf{skin and hair diagnostics} using multimodal AI models for real-time health insights. Developed scalable APIs for personalized \textbf{daily care routines}, weather-based recommendations, and scheduled reminders, supporting comprehensive scan history tracking.
+Built an AI-driven platform for \textbf{skin and hair diagnostics} using multimodal models. Developed scalable APIs for \textbf{personalized care routines}, weather-based recommendations, and scan history tracking.
 
 \vspace{1pt}
 \textbf{Wardrobe (E-commerce API Architecture)} \\
